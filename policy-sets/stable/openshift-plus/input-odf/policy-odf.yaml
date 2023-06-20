@@ -69,11 +69,11 @@ spec:
         - ReadWriteOnce
         resources:
           requests:
-            storage: 1Ti
-        storageClassName: thin-csi
+            storage: 900GiB
+        storageClassName: local-block
         volumeMode: Block
       status: {}
-    name: ocs-deviceset-thin-csi
+    name: ocs-deviceset-local-block
     placement: {}
     portable: true
     preparePlacement: {}
