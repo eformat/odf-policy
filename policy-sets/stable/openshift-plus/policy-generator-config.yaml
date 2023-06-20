@@ -22,20 +22,26 @@ policyDefaults:
     - NIST SP 800-53
   policyAnnotations: {"argocd.argoproj.io/compare-options": "IgnoreExtraneous"}
 policies:
-- name: policy-odf
-  categories:
-    - SI System and Information Integrity
-  controls: 
-    - SI-7 Software Firmware and Information Integrity
-  manifests:
-    - path: input-odf/policy-odf.yaml
-- name: policy-odf-status
-  categories:
-    - SI System and Information Integrity
-  controls: 
-    - SI-7 Software Firmware and Information Integrity
-  dependencies:
-    - name: policy-odf
-  manifests:
-    - path: input-odf/policy-odf-status.yaml
-  remediationAction: inform
+  - name: odf
+    manifests:
+      - path: input-odf/
+        kustomizeOptions:
+          enableAlphaPlugins: true
+          enableHelm: true
+# - name: policy-odf
+#   categories:
+#     - SI System and Information Integrity
+#   controls: 
+#     - SI-7 Software Firmware and Information Integrity
+#   manifests:
+#     - path: input-odf/policy-odf.yaml
+# - name: policy-odf-status
+#   categories:
+#     - SI System and Information Integrity
+#   controls: 
+#     - SI-7 Software Firmware and Information Integrity
+#   dependencies:
+#     - name: policy-odf
+#   manifests:
+#     - path: input-odf/policy-odf-status.yaml
+#   remediationAction: inform
