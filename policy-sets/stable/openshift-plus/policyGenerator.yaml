@@ -36,11 +36,3 @@ policies:
     - path: input-odf/policy-odf-status.yaml
   remediationAction: inform
 # ODF Policies - end
-policySets:
-  - description: The OpenShift Platform Plus policy set applies several policies
-      that install the OpenShift Platform Plus products using best practices
-      that allow them to work well together. This policy set is focused on 
-      the components that install to every managed cluster.
-    name: openshift-plus-clusters
-    placement:
-      placementPath: input/clusters-placement.yaml
