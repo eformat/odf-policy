@@ -32,6 +32,7 @@ policies:
        kustomizeOptions:
          enableAlphaPlugins: true
          enableHelm: true
+   policyAnnotations: {"argocd.argoproj.io/compare-options": "IgnoreExtraneous"}
  - name: policy-odf-status
    categories:
      - SI System and Information Integrity
@@ -45,3 +46,4 @@ policies:
          enableAlphaPlugins: true
          enableHelm: true
    remediationAction: inform
+   policyAnnotations: {"argocd.argoproj.io/compare-options": "IgnoreExtraneous"}
