@@ -1,6 +1,5 @@
 resources:
-- clusters-placement.yaml
+  - clusters-placement.yaml
+
 generators:
-- ./policyGenerator.yaml
-commonLabels:
-  open-cluster-management.io/policy-set: openshift-plus
+  - policy-generator-config.yaml
