@@ -1,3 +1,5 @@
+resources:
+- clusters-placement.yaml
 generators:
 - ./policyGenerator.yaml
 commonLabels:
