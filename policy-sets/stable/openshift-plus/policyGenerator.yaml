@@ -1,3 +1,4 @@
+---
 apiVersion: policy.open-cluster-management.io/v1
 kind: PolicyGenerator
 metadata:
@@ -11,15 +12,16 @@ policyDefaults:
     - CM Configuration Management
   controls: 
     - CM-2 Baseline Configuration
+  consolidateManifests: false
+  disabled: false
   namespace: open-cluster-management-global-set
-  policySets:
-    - openshift-plus-hub
+  pruneObjectBehavior: "DeleteAll"
   remediationAction: enforce
   severity: medium
   standards:
     - NIST SP 800-53
+  policyAnnotations: {"argocd.argoproj.io/compare-options": "IgnoreExtraneous"}
 policies:
-# ODF Policies - start
 - name: policy-odf
   categories:
     - SI System and Information Integrity
@@ -37,4 +39,3 @@ policies:
   manifests:
     - path: input-odf/policy-odf-status.yaml
   remediationAction: inform
-# ODF Policies - end
