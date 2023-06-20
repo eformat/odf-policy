@@ -10,7 +10,7 @@ spec:
   goTemplate: true
   generators:
   - clusterDecisionResource:
-      configMapRef: placement-openshift-plus-clusters
+      configMapRef: acm-placement
       labelSelector:
         matchLabels:
           cluster.open-cluster-management.io/placement: placement-openshift-plus-clusters
