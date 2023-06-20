@@ -3,8 +3,10 @@ kind: PolicyGenerator
 metadata:
   name: policy-openshift-plus
 placementBindingDefaults:
-  name: binding-policy-openshift-plus-hub
+  name: policy-openshift-plus
 policyDefaults:
+  placement:
+    placementName: placement-odf
   categories:
     - CM Configuration Management
   controls: 
