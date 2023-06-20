@@ -13,7 +13,11 @@ metadata:
   namespace: openshift-local-storage
 spec:
   targetNamespaces:
-    - openshift-storage
+    - openshift-storage'
+spec:
+  targetNamespaces:
+  - openshift-local-storage
+  upgradeStrategy: Default
 ---
 apiVersion: operators.coreos.com/v1alpha1
 kind: Subscription
