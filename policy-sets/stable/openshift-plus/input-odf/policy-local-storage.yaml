@@ -13,9 +13,6 @@ metadata:
   namespace: openshift-local-storage
 spec:
   targetNamespaces:
-    - openshift-storage'
-spec:
-  targetNamespaces:
   - openshift-local-storage
   upgradeStrategy: Default
 ---
