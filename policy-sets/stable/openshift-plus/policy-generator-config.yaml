@@ -41,7 +41,7 @@ policies:
      - name: policy-odf
    manifests:
      - path: input-odf/policy-odf-status.yaml
-        kustomizeOptions:
-          enableAlphaPlugins: true
-          enableHelm: true
+       kustomizeOptions:
+         enableAlphaPlugins: true
+         enableHelm: true
    remediationAction: inform
